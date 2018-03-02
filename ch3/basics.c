@@ -20,10 +20,12 @@ int hello_n(int n, char *str) {
 }
 
 int loops(char *str) {
+  // for loop
   for (int i = 0; i < 5; i++) {
     printf("for iteration %d - %s\n", i + 1, str);
   }
 
+  // while loop
   int i = 0;
   while (i < 5) {
     printf("while iteration %d - %s\n", i + 1, str);
@@ -35,6 +37,9 @@ int loops(char *str) {
 
 int main(int argc, char **argv) {
   char *str = "Hello World!";
+
+  int x = add_together(1, 2);
+  printf("add_together results: %d\n", x);
 
   loops(str);
 
