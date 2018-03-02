@@ -1,0 +1,6 @@
+[
+  {
+    "files": "**/*.c",
+    "command": "clang-format -i ${srcFile}"
+  }
+]
