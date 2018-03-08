@@ -1,6 +1,6 @@
 [
   {
     "files": "**/*.c",
-    "command": "clang-format -i ${srcFile}"
+    "command": "clang-format -i -style=Google ${srcFile}"
   }
 ]
