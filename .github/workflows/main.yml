@@ -1,0 +1,22 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/hello-world-docker-action@master
+      with:
+        who-to-greet: 'Mona the Octocat'
+    - name: local
+      uses: ./.github/actions/hello-world-docker
+      with:
+        who-to-greet: 'Mona the Private Octocat'
+    - name: make
+      run: make
+    - name: make check
+      run: make check
